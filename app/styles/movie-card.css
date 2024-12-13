@@ -1,0 +1,108 @@
+.movie-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.movie-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 15rem;
+  gap: 2rem;
+}
+
+.movie-card {
+  height: 360px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(14, 11, 22);
+  color: rgb(222, 220, 238);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.movie-card.skeleton {
+  height: 360px;
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(14, 11, 22, 0.548);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 50px 2px rgba(0, 0, 0, 0.479);
+}
+
+.movie-card.skeleton:after {
+  content: "";
+  position: absolute;
+  left: -210%;
+  width: 200%;
+  height: 200%;
+
+  background: linear-gradient(
+    75deg,
+    rgba(255, 255, 255, 0) 40%,
+    rgba(255, 255, 255, 0.1) 42%,
+    rgba(255, 255, 255, 0.5) 55%,
+    rgba(255, 255, 255, 0.15) 62%,
+    rgba(255, 255, 255, 0) 70%
+  );
+
+  animation: slide 1.25s infinite;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0%;
+    transform: translateX(20%);
+  }
+  50% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+    transform: translateX(140%);
+  }
+}
+.image-container {
+  height: 70%;
+  width: 100%;
+}
+
+.poster-image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+}
+
+.title {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.load-button {
+  background: rgb(14, 11, 22);
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.infinite-scroll-container {
+  max-width: 60rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.loading-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}

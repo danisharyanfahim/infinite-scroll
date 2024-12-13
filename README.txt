@@ -1,4 +1,4 @@
-This is mainly just a text document to state all the things I need to do in order to get every single one of my web apps running:
+This is mainly just a text document to state all the things I need to do in order to get every single one of my web apps running, as well as a log of any issues I run into during the deployment process and how to resolve them:
 Once I have a better grasp of how to use Docker and Docker compose I don't think most of these will be necessary
 
 Initialize App---------------------------------------------------------------------------------------------------------------------------
@@ -69,6 +69,7 @@ CLI Commands:
 -sanity@latest (CMS client) (Ignore this for now)
 -react-icons (icons)
 -react-syntax-highlighter (code highlighter based on prismJS for react)
+--save-dev -uid-generator (uuid generator for keys)
 
 
 
@@ -197,6 +198,7 @@ CLI commands:
     a)Project directory
     -@sanity/image-url
     -@sanity/client
+    -next-sanity
     b)Sanity directory
     -@sanity/code-input (Code highlighter for sanity studio)
     -sanity-plugin-mux-input (Video plugin for sanity studio)
@@ -237,3 +239,7 @@ CLI commands:
 7) Updating existing build, repeat the same steps as if you were deploying for the first time,
 but when it asks to create a new build it will ask if you want to select from an existing build, 
 then you select the build for your project and continue with the same steps
+
+***Important
+-This is working for React and React Dom Version 19.0.0 and Next Version 15.1, I had problems deploying it to Vercel and hosting on the local version due to a peer dependency conflict arising from using an older version of React. I needed to use the command npm -i --legacy-peer-deps to fix this and also put that into the vercel build commands in order to get it to run. So, either make sure the react version and react dom version are both the same and up to date on both my machine and vercel,
+or just create a Docker container which uses the current version and then just download those onto any other machines I use. Since, I know that this version will work.
