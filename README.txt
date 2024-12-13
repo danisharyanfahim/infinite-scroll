@@ -75,7 +75,12 @@ CLI Commands:
 
 6) Replace layout.tsx file in the app directory with the following code:
 
+import { ThemeProvider } from "./context/ThemeProvider";
+import Navbar from "./components/layout/nav/Navbar";
+import Footer from "./components/layout/Footer";
+import { Suspense } from "react";
 import "./styles/globals.scss";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -123,10 +128,6 @@ export default function RootLayout({
 8) Next Config, copy and paste:
 
 import type { NextConfig } from "next";
-import { ThemeProvider } from "./context/ThemeProvider";
-import Navbar from "./components/layout/nav/Navbar";
-import Footer from "./components/layout/Footer";
-import { Suspense } from "react";
 
 const nextConfig: NextConfig = {
   images: {
