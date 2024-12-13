@@ -4,8 +4,6 @@ import { fetchMovies } from "../utils/server-actions";
 import MovieCard, { MovieCardProps } from "@/app/components/MovieCard";
 import useOnScreen from "@/app/hooks/useOnScreen";
 
-const UIDGenerator = require("uid-generator");
-const uidgen = new UIDGenerator();
 const moviesPerPage = 3;
 
 const InfiniteScroll = ({
@@ -54,7 +52,7 @@ const InfiniteScroll = ({
       <div className="movie-card-container">
         {movies.map((movie, index) => (
           <MovieCard
-            key={uidgen.generateSync()}
+            key={index}
             title={movie.title}
             image={movie.image}
             overview={movie.overview}
