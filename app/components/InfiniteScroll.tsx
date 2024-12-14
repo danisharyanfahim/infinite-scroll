@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import { fetchMoviesByPage } from "../../../utils/server-actions";
+import { fetchMoviesByPage } from "../utils/server-actions";
 import MovieCard, { MovieCardProps } from "@/app/components/MovieCard";
 import useOnScreen from "@/app/hooks/useOnScreen";
 

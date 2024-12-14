@@ -1,23 +1,38 @@
 "use client";
 
-import { useSearchParams, useRouter } from "next/navigation";
+import {
+  useSearchParams,
+  useRouter,
+  usePathname,
+  redirect,
+} from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { IoMdSearch } from "react-icons/io";
 
 const SearchBar = () => {
   const searchParams = useSearchParams();
+  const pathname = usePathname();
   const router = useRouter();
   const [search, setSearch] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const params = new URLSearchParams(searchParams.toString());
+
     if (search) {
-      params.set("title", search);
-    } else {
-      params.delete("title");
+      //If search bar isn't empty
+      if (search.includes("#")) {
+        params.set("category", search.substring(1));
+        params.delete("title"); //If at movies page then do nothing
+      } else {
+        params.set("title", search);
+        params.delete("category"); //If at movies page then do nothing
+      }
+      router.push(`/movies/search?${params.toString()}`);
+    } else if (pathname !== "/movies") {
+      //If search bar is empty and you are not on the movies page then redirect to the movies page
+      redirect(`/movies`);
     }
-    router.push(`/movies?${params.toString()}`); // Update the URL with the new params
   };
 
   return (

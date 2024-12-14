@@ -36,5 +36,10 @@ export default {
       type: 'string',
       title: 'Overview',
     },
+    {
+      name: 'releaseYear',
+      type: 'number',
+      title: 'Release Year',
+    },
   ],
 }

@@ -1,9 +1,9 @@
+import InfiniteScroll from "@/app/components/InfiniteScroll";
+import SearchBar from "@/app/components/SearchBar";
+import { getNumberOfMovies } from "@/app/utils/server-actions";
 import React from "react";
-import InfiniteScroll from "../../components/InfiniteScroll";
-import { getNumberOfMovies } from "../../utils/server-actions";
-import SearchBar from "../../components/SearchBar";
 
-const Index = async ({
+const Search = async ({
   searchParams,
 }: {
   searchParams: Promise<{ category?: string; title?: string } | undefined>;
@@ -20,4 +20,4 @@ const Index = async ({
   );
 };
 
-export default Index;
+export default Search;
