@@ -25,6 +25,7 @@
   overflow: hidden;
   box-shadow: 0px 0px 10px 0px rgba(0 0 0 / 0.2);
   border: 3px solid rgba(19, 20, 22, 0.315);
+  animation: appear 0.2s;
 }
 
 .movie-card.skeleton {
@@ -128,12 +129,33 @@
 
 .search-bar {
   background: rgb(14, 11, 22);
+  border-radius: 1rem 0rem 0rem 1rem;
+  box-shadow: 0px 0px 10px 0px rgba(38, 43, 82, 0.2);
+}
+
+.search-bar:focus,
+.search-bar:hover {
+  box-shadow: inset 0px 0px 0px 2px rgb(107, 115, 126);
 }
 
 .search-button {
   background: rgb(222, 220, 238);
   color: rgb(14, 11, 22);
   display: flex;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  p {
+    transform: scale(115%);
+    transition: all 0.3s;
+  }
+}
+
+.search-button:active {
+  background: rgb(22, 75, 189);
+  color: rgb(222, 220, 238);
+  transition: background-color 0.1s;
 }
 
 .category-container {
@@ -187,7 +209,21 @@
   z-index: 2;
 }
 
+.play-button:hover {
+  transform: scale(108%);
+  transition: all 0.25s;
+}
+
 .language,
 .release-year {
   color: rgb(84, 98, 121);
+}
+
+@keyframes appear {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
 }
