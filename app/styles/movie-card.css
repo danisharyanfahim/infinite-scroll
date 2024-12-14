@@ -1,7 +1,8 @@
 .movie-page {
   width: 100%;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .movie-card-container {
@@ -9,7 +10,6 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 15rem;
   gap: 2rem;
 }
 
@@ -105,4 +105,30 @@
   justify-content: center;
   margin-top: 2rem;
   gap: 2rem;
+}
+
+.search-bar-container {
+  padding: 10rem 0rem;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.search-bar,
+.search-button {
+  padding: 1rem;
+  font-size: 1.25rem;
+}
+
+.search-bar {
+  background: rgb(14, 11, 22);
+}
+
+.search-button {
+  background: rgb(222, 220, 238);
+  color: rgb(14, 11, 22);
+  display: flex;
 }

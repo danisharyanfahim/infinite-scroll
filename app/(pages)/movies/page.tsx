@@ -1,8 +1,7 @@
 import React from "react";
 import InfiniteScroll from "./[slug]/InfiniteScroll";
-import { getNumberOfMovies } from "./utils/server-actions";
-
-export const revalidate = 30; //Page checks server for new articles every 30 seconds, also disables auto-caching
+import { getNumberOfMovies } from "../../utils/server-actions";
+import SearchBar from "../../components/SearchBar";
 
 const Index = async ({
   searchParams,
@@ -12,6 +11,7 @@ const Index = async ({
   const numberOfMovies = await getNumberOfMovies(searchParams);
   return (
     <div className="movie-page">
+      <SearchBar />
       <InfiniteScroll
         searchParams={searchParams}
         numberOfMovies={numberOfMovies}
