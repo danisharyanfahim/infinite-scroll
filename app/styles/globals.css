@@ -28,8 +28,8 @@
 html,
 body {
   color: var(--text-color);
-  background: linear-gradient(90deg, rgb(59, 3, 3), rgb(83, 6, 51));
-  background-color: black;
+  background-color: rgb(49, 48, 66);
+  background-attachment: fixed;
   width: 100%;
   min-height: 100dvh;
   overflow-x: hidden;
@@ -38,7 +38,6 @@ body {
   &::before {
     content: "";
     position: absolute;
-    background: linear-gradient(to right, rgb(14, 8, 100), rgb(38, 5, 99));
     box-shadow: inherit;
     -webkit-mask: linear-gradient(#000000, transparent);
     mask: linear-gradient(#000000, transparent);

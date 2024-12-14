@@ -79,7 +79,11 @@ const InfiniteScroll = ({
           />
         ))}
       </div>
-      <div className="loading-container" ref={loaderRef}>
+      <div
+        className="loading-container"
+        ref={loaderRef}
+        style={{ marginTop: movies.length >= 3 ? "2rem" : "0rem" }}
+      >
         {Array(numberOfSkeletonCards())
           .fill(null)
           .map((_, index) => (
