@@ -39,7 +39,7 @@
 html,
 body {
   color: var(--text-color);
-  background-color: rgb(49, 48, 66);
+  background: linear-gradient(90deg, rgb(13, 8, 100), rgb(97, 18, 104));
   background-attachment: fixed;
   width: 100%;
   min-height: 100dvh;
