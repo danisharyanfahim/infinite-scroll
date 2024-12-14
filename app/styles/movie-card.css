@@ -15,20 +15,21 @@
 }
 
 .movie-card {
-  height: 360px;
-  width: 240px;
+  height: 560px;
+  width: 320px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  background: rgb(14, 11, 22);
-  color: rgb(222, 220, 238);
+  color: rgb(20, 20, 37);
+  background: linear-gradient(-45deg, rgb(243, 242, 252), rgb(225, 230, 240));
   border-radius: 1rem;
   overflow: hidden;
+  box-shadow: 0px 0px 10px 0px rgba(0 0 0 / 0.2);
+  border: 3px solid rgba(19, 20, 22, 0.315);
 }
 
 .movie-card.skeleton {
-  height: 360px;
-  width: 240px;
+  height: 560px;
+  width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -71,7 +72,7 @@
   }
 }
 .image-container {
-  height: 70%;
+  height: 60%;
   width: 100%;
 }
 
@@ -80,11 +81,13 @@
   width: 100%;
   position: absolute;
   object-fit: cover;
+  border-radius: calc(1rem - 4px);
 }
 
 .title {
-  margin-top: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.33rem;
+  text-wrap: balance;
+  text-shadow: 0px 0px 10px rgba(37, 39, 58, 0.103);
 }
 
 .load-button {
@@ -94,7 +97,7 @@
 }
 
 .infinite-scroll-container {
-  max-width: 60rem;
+  max-width: 70rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,4 +134,60 @@
   background: rgb(222, 220, 238);
   color: rgb(14, 11, 22);
   display: flex;
+}
+
+.category-container {
+  margin-top: 0.5rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: rgb(54, 112, 219);
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.33rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px 0px rgba(38, 43, 82, 0.2);
+}
+
+.rating-container {
+  margin-top: 0.5rem;
+  color: rgb(240, 164, 0);
+}
+
+.star {
+  filter: drop-shadow(0px 0px 10px rgba(38, 43, 82, 0.2));
+}
+
+.content-container {
+  padding: 0.75rem;
+}
+
+.play-button-container {
+  position: absolute;
+  padding: 0rem 1rem;
+  width: 100%;
+  top: calc(60% - 32px);
+  font-size: 1.5rem;
+}
+
+.play-button {
+  background: linear-gradient(135deg, rgb(48, 34, 172), rgb(24, 11, 139));
+  color: rgb(242, 245, 250);
+  border-radius: 50%;
+  float: right;
+  height: 64px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 10px 0px rgba(38, 43, 82, 0.2);
+  z-index: 2;
+}
+
+.language,
+.release-year {
+  color: rgb(84, 98, 121);
 }

@@ -70,13 +70,7 @@ const InfiniteScroll = ({
     <div className="infinite-scroll-container">
       <div className="movie-card-container">
         {movies.map((movie, index) => (
-          <MovieCard
-            key={index}
-            title={movie.title}
-            image={movie.image}
-            overview={movie.overview}
-            slug={movie.slug}
-          />
+          <MovieCard key={index} {...movie} />
         ))}
       </div>
       <div

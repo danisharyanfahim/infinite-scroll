@@ -41,5 +41,25 @@ export default {
       type: 'number',
       title: 'Release Year',
     },
+    {
+      name: 'rating',
+      type: 'number',
+      title: 'Rating',
+    },
+    {
+      name: 'length',
+      type: 'number',
+      title: 'Length in Minutes',
+    },
+    {
+      name: 'lang',
+      type: 'string',
+      title: 'language',
+    },
+    {
+      name: 'link',
+      type: 'string',
+      title: 'link',
+    },
   ],
 }

@@ -1,5 +1,16 @@
 @import "./movie-card.css";
 
+@font-face {
+  font-family: paragraph;
+  src: url("../../public/assets/fonts/IBMPlexSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: subtitle;
+  src: url("../../public/assets/fonts/IBMPlexSans-SemiBold.ttf")
+    format("truetype");
+}
+
 :root {
   --background: #ffffff;
   --text-color: #171717;
@@ -69,4 +80,22 @@ input {
   border: none;
   -webkit-appearance: none;
   appearance: none;
+}
+
+p {
+  font-family: paragraph, sans-serif;
+  font-size: var(--font-size-paragraph);
+}
+
+h4 {
+  font-family: subtitle, sans-serif;
+  font-size: clamp(1.25rem, 1vw + 1rem, 2.25rem);
+}
+
+.home-page {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

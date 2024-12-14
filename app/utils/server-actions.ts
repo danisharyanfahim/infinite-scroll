@@ -44,7 +44,7 @@ export const fetchMoviesByPage = async (
   const firstMovie = (page - 1) * moviesPerPage;
   const lastMovie = page * moviesPerPage;
   const { title, category } = (await searchParams) || "";
-  const queryFields = `{'image': posterImage, title, overview, 'slug': slug.current}`;
+  const queryFields = `{'image': posterImage, title, link, rating, releaseYear, categories[], lang}`;
   let movieQuery, queryFilter;
 
   if (title) {
