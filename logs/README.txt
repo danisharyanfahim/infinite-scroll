@@ -1,9 +1,5 @@
 Todo list:
--Simplify the movies page so that it makes a simple fetch request to return all of the newest movies in order of date added
--Simplify the infinite loader so that it doesn't need to fetch movies twice, once for the infinite loader and the other for the parent component
--Make sure it works on mobile as well, so make it responsive (use the useMediaQuery hook I made)
--Add date searching as some of the features 
--Add the day and night toggle switch
+-Nothing
 
 
 Done:
@@ -16,3 +12,8 @@ Done:
 besides this was just a test to make sure the infinite scroll and lazy loading worked properly before I implemented them into my blog,
 not an actual movies app
 -Use Lazy loading for the movie images
+-Make sure it works on mobile as well, so make it responsive 
+-Show film length and format in hours and minutes
+-Add year of release searching as some of the features 
+-No Results were found page if the number of movies is 0
+

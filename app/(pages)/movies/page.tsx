@@ -6,9 +6,11 @@ import SearchBar from "../../components/SearchBar";
 const Index = async ({
   searchParams,
 }: {
-  searchParams: Promise<{ category?: string; title?: string } | undefined>;
+  searchParams: Promise<
+    { category?: string; title?: string; releaseYear?: number } | undefined
+  >;
 }) => {
-  const numberOfMovies = await getNumberOfMovies(searchParams);
+  const numberOfMovies: number = await getNumberOfMovies(searchParams);
   return (
     <div className="movie-page">
       <SearchBar />

@@ -24,9 +24,16 @@ const SearchBar = () => {
       if (search.includes("#")) {
         params.set("category", search.substring(1));
         params.delete("title"); //If at movies page then do nothing
+        params.delete("releaseYear"); //If at movies page then do nothing
+      } else if (search.includes("from:")) {
+        params.set("category", search.substring(1));
+        params.delete("title"); //If at movies page then do nothing
+        params.delete("category"); //If at movies page then do nothing
+        params.set("releaseYear", search.substring(5));
       } else {
         params.set("title", search);
         params.delete("category"); //If at movies page then do nothing
+        params.delete("releaseYear"); //If at movies page then do nothing
       }
       router.push(`/movies/search?${params.toString()}`);
     } else if (pathname !== "/movies") {

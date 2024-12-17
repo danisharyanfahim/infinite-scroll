@@ -107,12 +107,14 @@
 .loading-container {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
 }
 
 .search-bar-container {
-  padding: 10rem 0rem;
+  padding: clamp(3rem, 10vw, 10rem) 0rem;
+  max-width: 320px;
 }
 
 .search-bar-wrapper {
@@ -131,6 +133,7 @@
   background: rgb(14, 11, 22);
   border-radius: 1rem 0rem 0rem 1rem;
   box-shadow: 0px 0px 10px 0px rgba(38, 43, 82, 0.2);
+  width: 268px;
 }
 
 .search-bar:focus,
@@ -215,7 +218,8 @@
 }
 
 .language,
-.release-year {
+.release-year,
+.length {
   color: rgb(84, 98, 121);
 }
 

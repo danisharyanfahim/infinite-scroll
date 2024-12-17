@@ -4,6 +4,7 @@ import Link from "next/link";
 import { IoStarSharp } from "react-icons/io5";
 import Tag from "./Tag";
 import { FaPlay } from "react-icons/fa";
+import { formatTime } from "../utils/utils";
 
 export interface MovieCardProps {
   title: string;
@@ -11,6 +12,7 @@ export interface MovieCardProps {
   link: string;
   rating: number;
   lang: string;
+  length: number;
   releaseYear: number;
   categories: string[];
 }
@@ -21,6 +23,7 @@ const MovieCard = ({
   link,
   rating,
   lang,
+  length,
   releaseYear,
   categories,
 }: MovieCardProps) => {
@@ -43,6 +46,7 @@ const MovieCard = ({
         <h4 className="title">{title}</h4>
         <p className="release-year">{releaseYear}</p>
         <p className="language">{lang}</p>
+        <p className="length">{formatTime(length)}</p>
         <div className="rating-container">
           {Array(rating)
             .fill(null)
@@ -51,8 +55,8 @@ const MovieCard = ({
             })}
         </div>
         <div className="category-container">
-          {categories.map((category) => {
-            return <Tag>{category}</Tag>;
+          {categories.map((category, index) => {
+            return <Tag key={index}>{category}</Tag>;
           })}
         </div>
       </div>

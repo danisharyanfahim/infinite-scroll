@@ -4,7 +4,7 @@ import { fetchMoviesByPage } from "../utils/server-actions";
 import MovieCard, { MovieCardProps } from "@/app/components/MovieCard";
 import useOnScreen from "@/app/hooks/useOnScreen";
 
-const moviesPerPage = 3;
+const moviesPerPage = 6;
 
 const InfiniteScroll = ({
   searchParams,
@@ -68,22 +68,28 @@ const InfiniteScroll = ({
 
   return (
     <div className="infinite-scroll-container">
-      <div className="movie-card-container">
-        {movies.map((movie, index) => (
-          <MovieCard key={index} {...movie} />
-        ))}
-      </div>
-      <div
-        className="loading-container"
-        ref={loaderRef}
-        style={{ marginTop: movies.length >= 3 ? "2rem" : "0rem" }}
-      >
-        {Array(numberOfSkeletonCards())
-          .fill(null)
-          .map((_, index) => (
-            <div key={index} className="movie-card skeleton"></div>
-          ))}
-      </div>
+      {numberOfMovies > 0 ? (
+        <>
+          <div className="movie-card-container">
+            {movies.map((movie, index) => (
+              <MovieCard key={index} {...movie} />
+            ))}
+          </div>
+          <div
+            className="loading-container"
+            ref={loaderRef}
+            style={{ marginTop: movies.length >= 3 ? "2rem" : "0rem" }}
+          >
+            {Array(numberOfSkeletonCards())
+              .fill(null)
+              .map((_, index) => (
+                <div key={index} className="movie-card skeleton"></div>
+              ))}
+          </div>
+        </>
+      ) : (
+        <h4>No results were found</h4> //Shows if the query returns no movies
+      )}
     </div>
   );
 };
