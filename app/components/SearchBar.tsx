@@ -26,7 +26,6 @@ const SearchBar = () => {
         params.delete("title"); //If at movies page then do nothing
         params.delete("releaseYear"); //If at movies page then do nothing
       } else if (search.includes("from:")) {
-        params.set("category", search.substring(1));
         params.delete("title"); //If at movies page then do nothing
         params.delete("category"); //If at movies page then do nothing
         params.set("releaseYear", search.substring(5));
