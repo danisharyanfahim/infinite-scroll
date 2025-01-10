@@ -11,10 +11,10 @@ This is a test application that I developed to test out a bunch of features I wi
 - The card design, while simple, looks clean and modern, and is good enough for something that was cooked up in half an hour
 
 Features:
-- Infinite loading:
+  Infinite Loading )
   - Uses my own intersection observer hook to load in movie cards as you scroll down the page, the number of cards loaded is adjustable
     and this works on all devices regardless of screen-width.
-- Lazy loading:
+  Lazy Loading)
   - Images: Rhis is as easy as setting the loading to lazy. I could have gone a step further and created smaller versions of the images
     which are blurred and load in before the actual image, but converting all of those would have taken too long.
   - Skeleton cards: I create a bunch of skeleton cards with a simple left to right glossy shine animation. First the card data will be
