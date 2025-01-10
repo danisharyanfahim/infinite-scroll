@@ -10,7 +10,7 @@ This is a test application that I developed to test out a bunch of features I wi
   page.
 - The card design, while simple, looks clean and modern, and is good enough for something that was cooked up in half an hour
 
-Features:
+## Features:
   - Infinite Loading
     - Uses my own intersection observer hook to load in movie cards as you scroll down the page, the number of cards loaded is adjustable
     and this works on all devices regardless of screen-width.
