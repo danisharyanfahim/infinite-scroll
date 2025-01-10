@@ -1,4 +1,4 @@
-##**Infinite Scroll Movies**
+## **Infinite Scroll Movies**
 
 This is a test application that I developed to test out a bunch of features I wished to use on my blog site:
 - The site uses SanitIO as a headless CMS to allow for uploading of movie data for the admin of the site (Me). When I originally, created
