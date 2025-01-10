@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: subtitle;
-  src: url("../../public/assets/fonts/IBMPlexSans-SemiBold.ttf")
+  src: url("../../public/assets/fonts/IBMPlexSans-Regular.ttf")
     format("truetype");
 }
 
@@ -87,6 +87,7 @@ p {
   font-size: var(--font-size-paragraph);
 }
 
+h1,
 h4 {
   font-family: subtitle, sans-serif;
   font-size: clamp(1.25rem, 1vw + 1rem, 2.25rem);

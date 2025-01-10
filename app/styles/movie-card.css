@@ -6,6 +6,26 @@
   margin-bottom: 5rem;
 }
 
+header {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.title-container {
+  color: white;
+  margin: 2rem 0rem;
+  padding: 1rem 0rem;
+  font-size: 3rem;
+}
+
+.title-container .colored {
+  background: linear-gradient(to top left, blue, rgb(0, 89, 255));
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .movie-card-container {
   width: 100%;
   display: flex;
@@ -113,8 +133,8 @@
 }
 
 .search-bar-container {
-  padding: clamp(3rem, 10vw, 10rem) 0rem;
   max-width: 320px;
+  margin-bottom: 5rem;
 }
 
 .search-bar-wrapper {
